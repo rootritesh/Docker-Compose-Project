@@ -1,0 +1,34 @@
+version: '3'
+
+services:
+
+  joomla:
+    image: joomla
+    restart: always
+    depends_on:
+       - joomladbos
+    ports:
+      - 80:80
+    environment:
+      JOOMLA_DB_HOST: joomladbos
+      JOOMLA_DB_USER: ritesh
+      JOOMLA_DB_PASSWORD: redhatritesh
+      JOOMLA_DB_NAME: mydb
+    volumes:
+      - jm_db:/var/www/html
+     
+  joomladbos:
+    image: mariadb
+    volumes:
+      - maria_db:/var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_USER: ritesh
+      MYSQL_PASSWORD: redhatritesh
+      MYSQL_DATABASE: mydb
+      
+
+volumes:
+   maria_db:
+   jm_db:

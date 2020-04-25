@@ -1,0 +1,40 @@
+=========Install docker-ce in Ubuntu============
+
+Step 1 - Open the terminal and type:
+sudo apt-get update
+
+Step 1 - Install Docker:
+sudo apt install docker.io
+
+
+=========Install docker in Redhat============
+
+NOTE=>Redhat docker-ce is not supppoted but there is small trick just follow the instaruction bellow:
+
+Step 1 - Open the terminal and type:
+cd /etc/yum.repos.d/
+gedit docker.repo
+
+Step 2 - Configure the yum manually by just typing
+
+[docker]
+baseurl=https://download.docker.com/linux/centos/7/x86_64/stable/
+gpgcheck=0
+
+Step 3 - Save and Exit
+
+Step 4 - Type the command in terminal to install docker-ce
+yum install docker-ce --nobest
+
+
+
+=========Install docker in Centos============
+Step 1 - Open the terminal and type:
+
+sudo yum check-update
+
+dnf config-manager --add-repo=https://download.docker.com/linux/centos/docker-ce.repo
+
+dnf install docker-ce --nobest -y
+
+

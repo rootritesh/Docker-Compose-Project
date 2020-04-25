@@ -1,0 +1,14 @@
+=========Install docker Compose in Linux============
+
+1-Run this command to download the current stable release of Docker Compose:
+
+sudo curl -L "https://github.com/docker/compose/releases/download/1.25.5/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+
+2-Apply executable permissions to the binary:
+
+sudo chmod +x /usr/local/bin/docker-compose
+
+
+=========For other os click the link below============
+link- https://docs.docker.com/compose/install/
+
