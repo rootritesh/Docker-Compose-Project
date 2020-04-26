@@ -11,8 +11,8 @@ services:
       - 80:80
     environment:
       JOOMLA_DB_HOST: joomladbos
-      JOOMLA_DB_USER: ritesh
-      JOOMLA_DB_PASSWORD: redhatritesh
+      JOOMLA_DB_USER: user
+      JOOMLA_DB_PASSWORD: password
       JOOMLA_DB_NAME: mydb
     volumes:
       - jm_db:/var/www/html
@@ -23,9 +23,9 @@ services:
       - maria_db:/var/lib/mysql
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: rootpass
-      MYSQL_USER: ritesh
-      MYSQL_PASSWORD: redhatritesh
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
       MYSQL_DATABASE: mydb
       
 
